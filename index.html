@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ED CyberShield - Ntow Emmanuel Danquah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+        }
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #22c55e;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .shield {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- Navbar -->
+    <nav class="bg-black border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center text-2xl shield">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tight">ED CyberShield</span>
+                    <p class="text-xs text-emerald-400 -mt-1">Ntow Emmanuel Danquah</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2.5 rounded-xl font-semibold flex items-center gap-2 transition">
+                <i class="fa-solid fa-lock"></i>
+                <span>Get Protected</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6 pt-20">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/20">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium">Cybersecurity Expert • Ghana & Global</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6">
+                    Defend. Scan.<br>
+                    <span class="text-emerald-400">Secure.</span>
+                </h1>
+                
+                <p class="text-xl text-zinc-300 mb-8">
+                    Professional malware & ransomware prevention, penetration testing, 
+                    and vulnerability scanning by Ntow Emmanuel Danquah.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                            class="bg-emerald-500 hover:bg-emerald-600 text-black px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition">
+                        Start Protection Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button onclick="document.getElementById('tools').scrollIntoView({ behavior: 'smooth' })"
+                            class="border border-white/50 hover:bg-white/10 px-8 py-4 rounded-2xl font-semibold text-lg transition">
+                        View Security Tools
+                    </button>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-8 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span>Certified Expert</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span>24/7 Monitoring</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span>Global Standards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="bg-zinc-900 py-6 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 opacity-75">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google" class="h-6">
+            <img src="https://www.freelogovectors.net/wp-content/uploads/2023/09/microsoft-logo-freelogovectors.net_.png" alt="Microsoft" class="h-8">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Cisco_logo.svg/2560px-Cisco_logo.svg.png" alt="Cisco" class="h-7">
+            <div class="text-emerald-400 font-semibold">ISO 27001 Certified</div>
+            <div class="text-emerald-400 font-semibold">CEH • OSCP Trained</div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-400 font-semibold tracking-widest">EXPERT SERVICES</span>
+                <h2 class="text-5xl font-bold mt-3">Comprehensive Cyber Defense</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-red-500/10 text-red-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Malware & Ransomware Prevention</h3>
+                    <p class="text-zinc-400 mb-6">
+                        Advanced endpoint protection, behavior analysis, and zero-trust architecture to stop threats before they spread.
+                    </p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Real-time threat detection</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Automated backup & recovery</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Employee training programs</li>
+                    </ul>
+                    <button class="mt-8 w-full bg-zinc-800 hover:bg-emerald-500 hover:text-black py-4 rounded-2xl font-medium transition">
+                        Learn More
+                    </button>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 relative">
+                    <div class="absolute -top-3 right-6 bg-amber-500 text-black text-xs font-bold px-4 py-1 rounded-full">Most Popular</div>
+                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Penetration Testing</h3>
+                    <p class="text-zinc-400 mb-6">
+                        Ethical hacking simulations to discover weaknesses before real attackers do. Black-box, grey-box & white-box testing.
+                    </p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Web & API testing</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Network infrastructure</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Detailed reports + remediation</li>
+                    </ul>
+                    <button class="mt-8 w-full bg-emerald-500 text-black hover:bg-emerald-600 py-4 rounded-2xl font-semibold transition">
+                        Book Pentest
+                    </button>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Vulnerability Scanning</h3>
+                    <p class="text-zinc-400 mb-6">
+                        Continuous automated and manual scanning across your infrastructure, cloud assets, and applications.
+                    </p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> OWASP Top 10 compliance</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> CVSS scoring & prioritization</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Monthly reports</li>
+                    </ul>
+                    <button class="mt-8 w-full bg-zinc-800 hover:bg-emerald-500 hover:text-black py-4 rounded-2xl font-medium transition">
+                        Scan Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://picsum.photos/id/64/800/900" alt="Ntow Emmanuel Danquah" 
+                         class="rounded-3xl shadow-2xl">
+                </div>
+                <div>
+                    <h2 class="text-5xl font-bold mb-6">Ntow Emmanuel Danquah</h2>
+                    <div class="text-emerald-400 text-xl mb-8">Founder & Principal Cybersecurity Consultant</div>
+                    
+                    <p class="text-zinc-300 leading-relaxed text-lg mb-8">
+                        With over 8 years of experience in offensive and defensive cybersecurity, 
+                        I help organizations and individuals stay one step ahead of cyber threats. 
+                        Specializing in malware analysis, ransomware mitigation strategies, 
+                        and comprehensive security assessments.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-zinc-900 p-6 rounded-2xl">
+                            <div class="text-4xl font-bold text-emerald-400">50+</div>
+                            <div class="text-zinc-400">Organizations Secured</div>
+                        </div>
+                        <div class="bg-zinc-900 p-6 rounded-2xl">
+                            <div class="text-4xl font-bold text-emerald-400">200+</div>
+                            <div class="text-zinc-400">Vulnerabilities Found</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center gap-4">
+                        <div class="px-5 py-3 bg-zinc-900 rounded-2xl text-sm">CEH</div>
+                        <div class="px-5 py-3 bg-zinc-900 rounded-2xl text-sm">CompTIA Security+</div>
+                        <div class="px-5 py-3 bg-zinc-900 rounded-2xl text-sm">OSCP Path</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools / Online Scanner Teaser -->
+    <section id="tools" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold">Online Security Tools</h2>
+                <p class="text-zinc-400 mt-4 max-w-md mx-auto">Free & premium tools to scan and protect your digital assets</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 border border-emerald-900/50 rounded-3xl p-8 text-center">
+                    <i class="fa-solid fa-file-shield text-6xl text-emerald-400 mb-6"></i>
+                    <h4 class="font-semibold text-2xl mb-2">URL Scanner</h4>
+                    <p class="text-zinc-400">Check any website for malware & phishing</p>
+                    <input type="text" id="urlInput" placeholder="https://example.com" 
+                           class="mt-6 w-full bg-black border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-emerald-500">
+                    <button onclick="fakeScan()" 
+                            class="mt-4 w-full bg-emerald-500 text-black py-4 rounded-2xl font-semibold">Scan URL</button>
+                </div>
+                
+                <div class="bg-zinc-900 border border-emerald-900/50 rounded-3xl p-8 text-center">
+                    <i class="fa-solid fa-laptop text-6xl text-blue-400 mb-6"></i>
+                    <h4 class="font-semibold text-2xl mb-2">Vulnerability Checker</h4>
+                    <p class="text-zinc-400">Quick system & software audit</p>
+                    <button onclick="alert('Demo: No critical vulnerabilities found in this simulation.')" 
+                            class="mt-12 w-full bg-blue-500 text-black py-4 rounded-2xl font-semibold">Run Quick Scan</button>
+                </div>
+                
+                <div class="bg-zinc-900 border border-emerald-900/50 rounded-3xl p-8 text-center">
+                    <i class="fa-solid fa-headset text-6xl text-purple-400 mb-6"></i>
+                    <h4 class="font-semibold text-2xl mb-2">Ransomware Simulator</h4>
+                    <p class="text-zinc-400">Test your backup strategy safely</p>
+                    <button onclick="alert('Educational simulation ready. Contact me for full engagement.')" 
+                            class="mt-12 w-full bg-purple-500 text-black py-4 rounded-2xl font-semibold">Launch Simulator</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl font-bold mb-6">Ready to secure your digital world?</h2>
+            <p class="text-xl mb-10">Get a free initial consultation and vulnerability report.</p>
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-black text-white px-12 py-6 rounded-3xl text-xl font-semibold hover:scale-105 transition">
+                Schedule Free Assessment
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-5xl font-bold mb-8">Get In Touch</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-envelope text-3xl text-emerald-400 mt-1"></i>
+                            <div>
+                                <div class="font-medium">Email</div>
+                                <a href="mailto:emmanuelntow314@gmail.com" class="text-zinc-400 hover:text-white">emmanuelntow314@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-phone text-3xl text-emerald-400 mt-1"></i>
+                            <div>
+                                <div class="font-medium">Phone / WhatsApp</div>
+                                <a href="https://wa.me/233537315691" class="text-zinc-400 hover:text-white">+233537315691</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-location-dot text-3xl text-emerald-400 mt-1"></i>
+                            <div>
+                                <div class="font-medium">Location</div>
+                                <div class="text-zinc-400">Accra, Ghana</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="space-y-6 bg-zinc-900 p-10 rounded-3xl">
+                    <div>
+                        <input type="text" id="name" placeholder="Your Name" 
+                               class="w-full bg-black border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <input type="email" id="email" placeholder="Business Email" 
+                               class="w-full bg-black border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <textarea id="message" rows="5" placeholder="Describe your security needs..." 
+                                  class="w-full bg-black border border-zinc-700 rounded-3xl px-6 py-5 focus:outline-none focus:border-emerald-500"></textarea>
+                    </div>
+                    <button type="button" onclick="submitForm()" 
+                            class="w-full bg-emerald-500 hover:bg-emerald-600 text-black py-6 rounded-3xl font-bold text-lg transition">
+                        Send Message - Get Protected
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-900 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-4xl">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+            <p class="text-zinc-500">&copy; 2026 ED CyberShield • Ntow Emmanuel Danquah. All Rights Reserved.</p>
+            <p class="text-xs text-zinc-600 mt-4">Professional Cybersecurity Services | Ethical Hacking | Threat Prevention</p>
+        </div>
+    </footer>
+
+    <script>
+        function fakeScan() {
+            const url = document.getElementById('urlInput').value || "https://example.com";
+            alert(`Scanning ${url}...\n\n✅ Safe! No malware or suspicious behavior detected in this demo.`);
+        }
+        
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            if (name) {
+                alert(`Thank you, ${name}! Ntow Emmanuel Danquah will contact you within 24 hours.`);
+                document.getElementById('contactForm').reset();
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+        
+        // Tailwind script already loaded
+        console.log('%cED CyberShield website loaded successfully!', 'color: #10b981; font-weight: bold');
+    </script>
+</body>
+</html>
